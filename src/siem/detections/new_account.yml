@@ -1,0 +1,10 @@
+id: new-account-created
+title: New local account created
+type: match
+severity: medium
+mitre: [T1136.001]
+description: >
+  A new user account was created (Linux useradd, Windows 4720). Attackers add
+  accounts for persistence; confirm each one matches a change request.
+filter:
+  action: account_created

@@ -1,0 +1,14 @@
+id: sudo-denied
+title: sudo denied (user not allowed or wrong password)
+type: match
+severity: medium
+mitre: [T1548.003]
+description: >
+  A user tried sudo and was refused. One-offs are usually mistakes; repeats,
+  or service accounts like www-data trying sudo, suggest someone probing for
+  privilege escalation.
+filter:
+  action: sudo
+  outcome: failure
+group_by: [host, user]
+window: 1h

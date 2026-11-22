@@ -1,0 +1,15 @@
+id: special-privileges-unexpected
+title: Special privileges assigned to an unexpected account
+type: match
+severity: low
+mitre: [T1078.003]
+description: >
+  Event 4672: an account logged on with admin-equivalent privileges. Built-in
+  service accounts are excluded; extend the allowlist with your known admin
+  accounts so what's left is worth reviewing.
+filter:
+  event_id: 4672
+  user:
+    not_in: [SYSTEM, LOCAL SERVICE, NETWORK SERVICE, DWM-1, DWM-2, UMFD-0, UMFD-1]
+group_by: [host, user]
+window: 1h

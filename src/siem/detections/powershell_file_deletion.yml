@@ -1,0 +1,13 @@
+id: powershell-file-deletion
+title: File deleted from PowerShell
+type: match
+severity: low
+mitre: [T1070.004]
+description: >
+  A file was deleted through PowerShell (Remove-Item / del / rm / erase).
+  Usually routine; important when the file name or the account is sensitive,
+  or when it lines up with other alerts (indicator removal).
+filter:
+  action: powershell
+  message:
+    regex: '(?:^|[\s;|])(?:Remove-Item|del|rm|erase|ri)\s'

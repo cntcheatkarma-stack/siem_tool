@@ -1,0 +1,12 @@
+id: sudo-root-shell
+title: Root shell opened through sudo
+type: match
+severity: medium
+mitre: [T1548.003, T1059.004]
+description: >
+  sudo used to start an interactive root shell (bash, sh, su -, ...). Legitimate
+  admins do this, but it bypasses per-command sudo logging, so it is worth a look.
+filter:
+  action: sudo
+  outcome: success
+  command: {regex: '(^|/)(ba|z|da|k)?sh(\s+-[il]+)?\s*$|(^|/)su(\s+-)?(\s+root)?\s*$|\s-[is]\s*$'}

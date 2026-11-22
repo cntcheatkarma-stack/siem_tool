@@ -1,0 +1,16 @@
+id: success-after-brute-force
+title: Successful login after repeated failures
+type: sequence
+severity: critical
+mitre: [T1110, T1078]
+description: >
+  A successful logon from a source IP that just produced a burst of failures.
+  This is the moment a brute-force attack may have worked: check the account,
+  what it did next, and whether the source IP is known.
+group_by: [src_ip]
+first:
+  filter: {action: logon, outcome: failure}
+  min_count: 5
+then:
+  filter: {action: logon, outcome: success}
+within: 15m

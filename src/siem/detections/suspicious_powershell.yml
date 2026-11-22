@@ -1,0 +1,13 @@
+id: suspicious-powershell
+title: Suspicious PowerShell script block
+type: match
+severity: high
+mitre: [T1059.001, T1027]
+description: >
+  Script Block Logging (4104) captured PowerShell with common attacker
+  tradecraft: encoded commands, download cradles, in-memory execution, or
+  attempts to disable defenses.
+filter:
+  action: powershell
+  message:
+    regex: '(?:-enc(?:odedcommand)?\s+[A-Za-z0-9+/=]{16,}|FromBase64String|\bIEX\b|Invoke-Expression|DownloadString|DownloadFile|Net\.WebClient|Invoke-WebRequest|\biwr\b|Start-BitsTransfer|AmsiUtils|amsiInitFailed|Set-MpPreference|Add-MpPreference\s+-Exclusion|Invoke-Mimikatz|sekurlsa)'

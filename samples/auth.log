@@ -1,0 +1,47 @@
+Nov 20 00:17:01 web01 CRON[1000]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 20 02:10:00 web01 sshd[4100]: Invalid user admin from 198.51.100.23 port 51000
+Nov 20 02:10:02 web01 sshd[4100]: Failed password for invalid user admin from 198.51.100.23 port 51000 ssh2
+Nov 20 02:11:50 web01 sshd[4101]: Invalid user test from 198.51.100.23 port 51001
+Nov 20 02:11:52 web01 sshd[4101]: Failed password for invalid user test from 198.51.100.23 port 51001 ssh2
+Nov 20 02:13:40 web01 sshd[4102]: Invalid user oracle from 198.51.100.23 port 51002
+Nov 20 02:13:42 web01 sshd[4102]: Failed password for invalid user oracle from 198.51.100.23 port 51002 ssh2
+Nov 20 02:15:30 web01 sshd[4103]: Invalid user ubuntu from 198.51.100.23 port 51003
+Nov 20 02:15:32 web01 sshd[4103]: Failed password for invalid user ubuntu from 198.51.100.23 port 51003 ssh2
+Nov 20 02:17:01 web01 CRON[1002]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 20 02:17:20 web01 sshd[4104]: Invalid user postgres from 198.51.100.23 port 51004
+Nov 20 02:17:22 web01 sshd[4104]: Failed password for invalid user postgres from 198.51.100.23 port 51004 ssh2
+Nov 20 02:19:10 web01 sshd[4105]: Invalid user guest from 198.51.100.23 port 51005
+Nov 20 02:19:12 web01 sshd[4105]: Failed password for invalid user guest from 198.51.100.23 port 51005 ssh2
+Nov 20 03:00:05 web01 sshd[4300]: Failed password for deploy from 203.0.113.50 port 40100 ssh2
+Nov 20 03:00:16 web01 sshd[4301]: Failed password for deploy from 203.0.113.50 port 40101 ssh2
+Nov 20 03:00:27 web01 sshd[4302]: Failed password for deploy from 203.0.113.50 port 40102 ssh2
+Nov 20 03:00:38 web01 sshd[4303]: Failed password for deploy from 203.0.113.50 port 40103 ssh2
+Nov 20 03:00:49 web01 sshd[4304]: Failed password for deploy from 203.0.113.50 port 40104 ssh2
+Nov 20 03:01:00 web01 sshd[4305]: Failed password for deploy from 203.0.113.50 port 40105 ssh2
+Nov 20 03:01:11 web01 sshd[4306]: Failed password for deploy from 203.0.113.50 port 40106 ssh2
+Nov 20 03:01:22 web01 sshd[4307]: Failed password for deploy from 203.0.113.50 port 40107 ssh2
+Nov 20 03:01:33 web01 sshd[4308]: Failed password for deploy from 203.0.113.50 port 40108 ssh2
+Nov 20 03:01:44 web01 sshd[4309]: Failed password for deploy from 203.0.113.50 port 40109 ssh2
+Nov 20 03:01:55 web01 sshd[4310]: Failed password for deploy from 203.0.113.50 port 40110 ssh2
+Nov 20 03:02:06 web01 sshd[4311]: Failed password for deploy from 203.0.113.50 port 40111 ssh2
+Nov 20 03:02:31 web01 sshd[4320]: Accepted password for deploy from 203.0.113.50 port 40188 ssh2
+Nov 20 03:02:31 web01 sshd[4320]: pam_unix(sshd:session): session opened for user deploy(uid=1001) by (uid=0)
+Nov 20 03:04:02 web01 sudo:   deploy : TTY=pts/1 ; PWD=/home/deploy ; USER=root ; COMMAND=/bin/bash
+Nov 20 03:05:40 web01 useradd[4402]: new user: name=sysupdate, UID=1002, GID=1002, home=/home/sysupdate, shell=/bin/bash, from=/dev/pts/1
+Nov 20 03:20:11 web01 sudo: www-data : user NOT in sudoers ; TTY=unknown ; PWD=/var/www/html ; USER=root ; COMMAND=/usr/bin/id
+Nov 20 03:20:40 web01 sudo: www-data : user NOT in sudoers ; TTY=unknown ; PWD=/var/www/html ; USER=root ; COMMAND=/bin/sh
+Nov 20 04:17:01 web01 CRON[1004]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 20 06:17:01 web01 CRON[1006]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 20 08:01:12 web01 sshd[5001]: Accepted publickey for alice from 192.0.2.10 port 50522 ssh2: ED25519 SHA256:q1w2e3r4t5y6u7i8o9p0
+Nov 20 08:02:00 web01 sudo:    alice : TTY=pts/0 ; PWD=/home/alice ; USER=root ; COMMAND=/usr/bin/apt update
+Nov 20 08:17:01 web01 CRON[1008]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 20 09:12:03 web01 sshd[5100]: Failed password for alice from 192.0.2.10 port 50601 ssh2
+Nov 20 09:12:09 web01 sshd[5100]: Accepted password for alice from 192.0.2.10 port 50601 ssh2
+Nov 20 09:30:00 web01 systemd-logind[612]: New session 42 of user alice.
+Nov 20 10:17:01 web01 CRON[1010]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 20 12:17:01 web01 CRON[1012]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 20 14:17:01 web01 CRON[1014]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 20 16:17:01 web01 CRON[1016]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 20 18:17:01 web01 CRON[1018]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 20 20:17:01 web01 CRON[1020]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 20 22:17:01 web01 CRON[1022]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)

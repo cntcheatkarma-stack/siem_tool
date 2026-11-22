@@ -1,0 +1,15 @@
+id: brute-force-login
+title: Brute-force login attempts
+type: threshold
+severity: high
+mitre: [T1110.001]
+description: >
+  Many failed logons from one source IP in a short window. Covers SSH
+  (auth.log) and Windows 4625. Tune `threshold` to your environment:
+  a few typos are normal, dozens a minute are not.
+filter:
+  action: logon
+  outcome: failure
+group_by: [src_ip]
+threshold: 5
+window: 5m
